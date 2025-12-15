@@ -1,4 +1,3 @@
-<img width="280" height="49" alt="image" src="https://github.com/user-attachments/assets/c942d354-8b67-4a41-8c46-cbff08d66abf" /># CameraRecorder
 防犯カメラの映像保存と動体検知の参考例です。
 
 ## 基本的な考え方
