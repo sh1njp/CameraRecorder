@@ -1,4 +1,4 @@
-# CameraRecorder
+<img width="280" height="49" alt="image" src="https://github.com/user-attachments/assets/c942d354-8b67-4a41-8c46-cbff08d66abf" /># CameraRecorder
 防犯カメラの映像保存と動体検知の参考例です。
 
 ## 基本的な考え方
@@ -6,6 +6,7 @@
 - 防犯カメラのRTSPサーバ機能を使用する。
 - Linuxを使って処理して必要な映像や画像を保存する。
 - 古いファイルの自動削除や保存や動体検知の処理が停止していないかなどの監視処理や再稼働処理などは割愛します。
+- 動画や画像ファイルは /wor/camera 配下に保存されます。
 
 ## 動体検知の画像例
 
@@ -34,6 +35,7 @@ RTSP_URL = "rtsp://[username]:[password]@[IPアドレス]:[ポート]/[ストリ
 
 ## 映像保存
 - [record-camnera.sh](record-camnera.sh)
+- 映像保存先：/work/camera/record
 
 ### 映像保存の方法
 - ffmpegを使用して、RTSPサーバのストリームを保存します。
@@ -45,6 +47,7 @@ ffmpeg -hide_banner -y -loglevel error -rtsp_transport tcp -use_wallclock_as_tim
 
 ## 動体検知
 - [detect_motion.py](detect_motion.py)
+- 検知画像保存先：/work/camera/detected_motion_images
 
 ### 動体検知の方法
 - Geminiに相談しました。
